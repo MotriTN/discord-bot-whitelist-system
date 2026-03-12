@@ -1,0 +1,16 @@
+# Secrets & Configuration
+.env
+.env.old
+
+# Database & Data
+lineage.db
+
+# Environments & Dependencies
+venv/
+
+# Python Internals
+__pycache__/
+*.pyc
+
+# IDE Specifics
+.vscode/
