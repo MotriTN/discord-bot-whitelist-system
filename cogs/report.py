@@ -69,6 +69,7 @@ class ReportCog(commands.Cog):
             return
 
         report.active = False
+        author.report_charges += 1
         db.commit()
 
         await check_member_integrity(self.bot, db, member)

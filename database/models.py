@@ -54,3 +54,13 @@ class DailyPlan(Base):
     status = Column(String, nullable=True) # "victory" or "defeat"
 
     user = relationship("User", back_populates="plans")
+
+class TrustBlock(Base):
+    __tablename__ = "trust_blocks"
+
+    id = Column(Integer, primary_key=True, index=True, autoincrement=True)
+    blocker_id = Column(BigInteger, ForeignKey("users.id"))
+    blocked_id = Column(BigInteger, ForeignKey("users.id"))
+
+    blocker = relationship("User", foreign_keys=[blocker_id])
+    blocked = relationship("User", foreign_keys=[blocked_id])
