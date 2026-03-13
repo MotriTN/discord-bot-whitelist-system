@@ -1,7 +1,7 @@
 import os
 from dotenv import load_dotenv
 
-load_dotenv()
+load_dotenv(override=True)
 
 DISCORD_TOKEN = os.getenv("DISCORD_TOKEN", "")
 DATABASE_URL = os.getenv("DATABASE_URL", "sqlite:///lineage.db")
